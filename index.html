@@ -6,17 +6,33 @@
 <title>JusticeForFreya ($FREYA)</title>
 
 <style>
+
 body{
 margin:0;
 font-family:Arial;
-background:#07131c;
+background:linear-gradient(to bottom, #07131c, #02080d);
 color:white;
 text-align:center;
 }
 
 header{
-padding:40px;
+padding:30px;
 background:#0d2433;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#1da1f2;
+}
+
+nav a{
+margin-left:20px;
+color:white;
+text-decoration:none;
 }
 
 .hero{
@@ -25,19 +41,56 @@ background:url("./Freya_1.jpg") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
+flex-direction:column;
 }
 
 .hero h1{
-font-size:60px;
+font-size:64px;
 background:rgba(0,0,0,0.6);
 padding:20px;
 border-radius:10px;
 }
 
+.hero p{
+max-width:600px;
+margin-top:20px;
+}
+
+.button{
+display:inline-block;
+margin:10px;
+padding:14px 28px;
+background:#1da1f2;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
 section{
-padding:60px 20px;
-max-width:900px;
+padding:70px 20px;
+max-width:1000px;
 margin:auto;
+}
+
+h2{
+color:#1da1f2;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-top:30px;
+}
+
+.card{
+background:#0d2433;
+padding:25px;
+border-radius:12px;
+width:200px;
 }
 
 .gallery{
@@ -48,57 +101,93 @@ gap:20px;
 
 .gallery img{
 width:100%;
-border-radius:10px;
-}
-
-.button{
-display:inline-block;
-margin-top:20px;
-padding:14px 28px;
-background:#1da1f2;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-cursor:pointer;
+border-radius:12px;
 }
 
 footer{
 padding:40px;
 background:#02080d;
 margin-top:60px;
+color:#9ecae6;
 }
-</style>
 
+iframe{
+border:none;
+border-radius:12px;
+margin-top:20px;
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-<h1>Justice For Freya</h1>
-<p>The walrus who captured the internet 🦭</p>
+<div class="logo">$FREYA</div>
+<nav>
+<a href="#">Home</a>
+<a href="#">Chart</a>
+<a href="#">Join</a>
+</nav>
 </header>
 
 <div class="hero">
-<h1>$FREYA</h1>
+<h1>Justice For Freya</h1>
+<p>The walrus who broke boats, captured the internet, and became a legend 🦭</p>
+
+<a class="button" href="https://pump.fun" target="_blank">🦭 Buy $FREYA</a>
+<a class="button" href="#">🐦 Twitter</a>
+<a class="button" href="#">💬 Telegram</a>
 </div>
 
 <section>
+
 <h2>The Story</h2>
+
 <p>
-In 2022 a walrus named Freya appeared in Oslofjord and became a global internet sensation.
-She climbed onto boats, broke them, and captured the world.
+In 2022, Freya the walrus appeared in Oslofjord and became a global internet sensation.
+She climbed onto boats, sank a few, and captured millions of hearts worldwide.
 </p>
+
 </section>
 
 <section>
+
 <h2>Tokenomics</h2>
-<p>75% Buybacks</p>
-<p>10% Ocean Charity</p>
-<p>15% Marketing</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>75%</h3>
+<p>Buybacks</p>
+</div>
+
+<div class="card">
+<h3>10%</h3>
+<p>Ocean Charity</p>
+</div>
+
+<div class="card">
+<h3>15%</h3>
+<p>Marketing</p>
+</div>
+
+</div>
+
 </section>
 
 <section>
+
+<h2>Live Chart</h2>
+
+<p>(Will appear after launch)</p>
+
+<iframe width="100%" height="400" src=""></iframe>
+
+</section>
+
+<section>
+
 <h2>Freya Gallery</h2>
 
 <div class="gallery">
@@ -111,31 +200,26 @@ She climbed onto boats, broke them, and captured the world.
 
 <section>
 
-<h2>Join The Movement</h2>
-
-<p><b>Contract:</b></p>
+<h2>Contract</h2>
 
 <p id="contract">COMING_SOON</p>
 
 <button onclick="copyContract()" class="button">Copy Contract</button>
 
-<br><br>
-
-<a class="button" href="https://pump.fun" target="_blank">
-🦭 Buy $FREYA
-</a>
-
 </section>
 
 <footer>
-JusticeForFreya • Protect Ocean Wildlife 🌊
+
+JusticeForFreya ($FREYA)<br>
+Protect Ocean Wildlife 🌊
+
 </footer>
 
 <script>
 function copyContract() {
 var text = document.getElementById("contract").innerText;
 navigator.clipboard.writeText(text);
-alert("Contract copied!");
+alert("Copied!");
 }
 </script>
 
