@@ -60,6 +60,7 @@ color:white;
 text-decoration:none;
 border-radius:8px;
 font-weight:bold;
+cursor:pointer;
 }
 
 footer{
@@ -109,7 +110,16 @@ She climbed onto boats, broke them, and captured the world.
 </section>
 
 <section>
-<h2>Join</h2>
+
+<h2>Join The Movement</h2>
+
+<p><b>Contract:</b></p>
+
+<p id="contract">COMING_SOON</p>
+
+<button onclick="copyContract()" class="button">Copy Contract</button>
+
+<br><br>
 
 <a class="button" href="https://pump.fun" target="_blank">
 🦭 Buy $FREYA
@@ -120,6 +130,14 @@ She climbed onto boats, broke them, and captured the world.
 <footer>
 JusticeForFreya • Protect Ocean Wildlife 🌊
 </footer>
+
+<script>
+function copyContract() {
+var text = document.getElementById("contract").innerText;
+navigator.clipboard.writeText(text);
+alert("Contract copied!");
+}
+</script>
 
 </body>
 </html>
