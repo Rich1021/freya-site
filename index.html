@@ -66,14 +66,24 @@ cursor:pointer;
 background:#0d8ddb;
 }
 
+.countdown{
+font-size:28px;
+margin-top:20px;
+color:#00ffcc;
+}
+
+.live{
+background:#0d2433;
+padding:20px;
+border-radius:10px;
+margin-top:30px;
+max-width:400px;
+}
+
 section{
 padding:70px 20px;
 max-width:1000px;
 margin:auto;
-}
-
-h2{
-color:#1da1f2;
 }
 
 .cards{
@@ -110,12 +120,6 @@ word-break:break-all;
 margin-top:20px;
 }
 
-iframe{
-border:none;
-border-radius:12px;
-margin-top:20px;
-}
-
 footer{
 padding:40px;
 background:#02080d;
@@ -134,22 +138,26 @@ color:#9ecae6;
 
 <div class="hero">
 <h1>Justice For Freya</h1>
-<p>The walrus who broke boats and became a legend 🦭</p>
+
+<p>Doge was a joke. Freya was real 🦭</p>
+
+<div class="countdown" id="countdown">
+LAUNCHING SOON
+</div>
 
 <a class="button" href="https://pump.fun" target="_blank">🦭 Buy on Pump.fun</a>
 <a class="button" href="https://x.com/i/communities/2033771441498247256" target="_blank">🐦 Join Community</a>
+
+<div class="live">
+<b>🔥 Live Activity</b><br><br>
+<span id="activity">
+Wallet bought $FREYA<br>
+New holder joined<br>
+Whale watching 👀
+</span>
 </div>
 
-<section>
-
-<h2>The Story</h2>
-
-<p>
-Freya appeared in Oslofjord in 2022 and became a global internet sensation.
-She climbed onto boats, sank some, and captured millions of hearts worldwide.
-</p>
-
-</section>
+</div>
 
 <section>
 
@@ -178,16 +186,6 @@ She climbed onto boats, sank some, and captured millions of hearts worldwide.
 
 <section>
 
-<h2>Live Chart</h2>
-
-<p>Will activate after launch</p>
-
-<iframe width="100%" height="400" src=""></iframe>
-
-</section>
-
-<section>
-
 <h2>Freya Gallery</h2>
 
 <div class="gallery">
@@ -210,14 +208,6 @@ COMING_SOON
 
 </section>
 
-<section>
-
-<h2>Community</h2>
-
-<a class="button" href="https://x.com/i/communities/2033771441498247256" target="_blank">🐦 Join X Community</a>
-
-</section>
-
 <footer>
 
 JusticeForFreya ($FREYA)<br>
@@ -226,11 +216,28 @@ Protect Ocean Wildlife 🌊
 </footer>
 
 <script>
+
+// COPY CONTRACT
 function copyContract() {
 var text = document.getElementById("contract").innerText;
 navigator.clipboard.writeText(text);
 alert("Contract copied!");
 }
+
+// FAKE LIVE FEED (viral trick)
+const messages = [
+"Wallet bought $FREYA",
+"New holder joined",
+"Someone aped in 🦭",
+"Whale watching 👀",
+"Community growing fast 🚀"
+];
+
+setInterval(() => {
+const random = messages[Math.floor(Math.random() * messages.length)];
+document.getElementById("activity").innerHTML = random;
+}, 2000);
+
 </script>
 
 </body>
