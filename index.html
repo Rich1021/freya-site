@@ -16,7 +16,7 @@ text-align:center;
 }
 
 header{
-padding:30px;
+padding:20px;
 background:#0d2433;
 display:flex;
 justify-content:space-between;
@@ -29,14 +29,8 @@ font-weight:bold;
 color:#1da1f2;
 }
 
-nav a{
-margin-left:20px;
-color:white;
-text-decoration:none;
-}
-
 .hero{
-height:85vh;
+height:90vh;
 background:url("./Freya_1.jpg") center/cover no-repeat;
 display:flex;
 align-items:center;
@@ -45,10 +39,10 @@ flex-direction:column;
 }
 
 .hero h1{
-font-size:64px;
+font-size:70px;
 background:rgba(0,0,0,0.6);
 padding:20px;
-border-radius:10px;
+border-radius:12px;
 }
 
 .hero p{
@@ -66,6 +60,10 @@ text-decoration:none;
 border-radius:8px;
 font-weight:bold;
 cursor:pointer;
+}
+
+.button:hover{
+background:#0d8ddb;
 }
 
 section{
@@ -104,17 +102,25 @@ width:100%;
 border-radius:12px;
 }
 
-footer{
-padding:40px;
-background:#02080d;
-margin-top:60px;
-color:#9ecae6;
+.contract-box{
+background:#0d2433;
+padding:20px;
+border-radius:10px;
+word-break:break-all;
+margin-top:20px;
 }
 
 iframe{
 border:none;
 border-radius:12px;
 margin-top:20px;
+}
+
+footer{
+padding:40px;
+background:#02080d;
+margin-top:60px;
+color:#9ecae6;
 }
 
 </style>
@@ -124,18 +130,13 @@ margin-top:20px;
 
 <header>
 <div class="logo">$FREYA</div>
-<nav>
-<a href="#">Home</a>
-<a href="#">Chart</a>
-<a href="#">Join</a>
-</nav>
 </header>
 
 <div class="hero">
 <h1>Justice For Freya</h1>
-<p>The walrus who broke boats, captured the internet, and became a legend 🦭</p>
+<p>The walrus who broke boats and became a legend 🦭</p>
 
-<a class="button" href="https://pump.fun" target="_blank">🦭 Buy $FREYA</a>
+<a class="button" href="https://pump.fun" target="_blank">🦭 Buy on Pump.fun</a>
 <a class="button" href="#">🐦 Twitter</a>
 <a class="button" href="#">💬 Telegram</a>
 </div>
@@ -145,8 +146,8 @@ margin-top:20px;
 <h2>The Story</h2>
 
 <p>
-In 2022, Freya the walrus appeared in Oslofjord and became a global internet sensation.
-She climbed onto boats, sank a few, and captured millions of hearts worldwide.
+Freya appeared in Oslofjord in 2022 and captured global attention.
+She climbed onto boats, sank some, and became one of the most iconic animals on the internet.
 </p>
 
 </section>
@@ -180,7 +181,7 @@ She climbed onto boats, sank a few, and captured millions of hearts worldwide.
 
 <h2>Live Chart</h2>
 
-<p>(Will appear after launch)</p>
+<p>Will activate after launch</p>
 
 <iframe width="100%" height="400" src=""></iframe>
 
@@ -202,9 +203,20 @@ She climbed onto boats, sank a few, and captured millions of hearts worldwide.
 
 <h2>Contract</h2>
 
-<p id="contract">COMING_SOON</p>
+<div class="contract-box" id="contract">
+COMING_SOON
+</div>
 
 <button onclick="copyContract()" class="button">Copy Contract</button>
+
+</section>
+
+<section>
+
+<h2>Community</h2>
+
+<a class="button" href="#">🐦 Twitter</a>
+<a class="button" href="#">💬 Telegram</a>
 
 </section>
 
@@ -219,7 +231,7 @@ Protect Ocean Wildlife 🌊
 function copyContract() {
 var text = document.getElementById("contract").innerText;
 navigator.clipboard.writeText(text);
-alert("Copied!");
+alert("Contract copied!");
 }
 </script>
 
